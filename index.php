@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Perpendo
  * Plugin URI:        https://github.com/perpendo/perpendo
- * Description:       Handle the basics with this plugin.
+ * Description:       A simple perpendo plugin...
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
@@ -14,10 +14,10 @@
  * Domain Path:       /languages
  */
 
-use Perpendo\Perpendo;
+//use Perpendo\Perpendo;
 
-require_once(realpath('vendor/autoload.php'));
+//require_once(realpath('vendor/autoload.php'));
 
-Perpendo::getInstance();
+//Perpendo::getInstance();
 
 ?>

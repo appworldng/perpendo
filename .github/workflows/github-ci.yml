@@ -35,8 +35,9 @@ jobs:
       - name: Preparing to Deploy
         run: sudo apt-get install rsync
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+      - name: Deploying Plugin
+        run: rsync -a ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
 
     # - name: Run test suite
+    #   "test": "vendor/bin/phpunit"
     #   run: composer run-script test

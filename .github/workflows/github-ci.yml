@@ -29,14 +29,15 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Generate Vendor Folder
+      - name: Preparing to deploy
         run: composer dump-autoload -o
 
-      - name: Preparing to Deploy
+      - name: CI/CD deploy build
         run: sudo apt-get install rsync
 
-      - name: Deploying Plugin
-        run: rsync -a ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
+        # - name: Deploying Plugin
+        # run: rsync -a ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
+        # run: rsync --rsh="/usr/bin/sshpass -p "password" ssh -o StrictHostKeyChecking=no -l root" ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
 
     # - name: Run test suite
     #   "test": "vendor/bin/phpunit"

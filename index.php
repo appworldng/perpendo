@@ -14,10 +14,10 @@
  * Domain Path:       /languages
  */
 
-//use Perpendo\Perpendo;
+use Perpendo\Perpendo;
 
-//require_once(realpath('vendor/autoload.php'));
+require_once(realpath('vendor/autoload.php'));
 
-//Perpendo::getInstance();
+Perpendo::getInstance();
 
 ?>
